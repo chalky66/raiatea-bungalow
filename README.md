@@ -1,6 +1,6 @@
-# Villa Tiare - Airbnb-Style Property Website
+# Raiatea Bungalow - Airbnb Style Website
 
-A production-ready, single-property "Airbnb-style" website built with Vue 3, Vite, Tailwind CSS, and modern web technologies. Features a responsive design, interactive photo carousel, property details, amenities, location map, and booking interface.
+A beautiful, responsive single-property website showcasing a private bungalow in Raiatea, French Polynesia. Built with Vue 3, Vite, Tailwind CSS, and modern web technologies for a production-ready Airbnb-style experience.
 
 ## 🏖️ Live Demo
 
