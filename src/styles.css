@@ -1,0 +1,36 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+/* Leaflet map styling */
+.leaflet-container {
+  @apply rounded-2xl;
+  height: 400px;
+  z-index: 1;
+}
+
+/* Custom scrollbar for better aesthetics */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500;
+}
+
+/* Smooth transitions for interactive elements */
+.btn-transition {
+  @apply transition-all duration-200 ease-in-out;
+}
+
+.card-shadow {
+  @apply shadow-lg shadow-gray-200/50;
+}

@@ -1,0 +1,49 @@
+{
+  "title": "Simple & Green Bungalow with Private Pool",
+  "location": "Raiatea, French Polynesia",
+  "address": "5 minutes from city center, Raiatea, French Polynesia",
+  "coords": { 
+    "lat": -16.8312, 
+    "lng": -151.4264 
+  },
+  "heroImages": [
+    "/img/hero1.jpg", 
+    "/img/hero2.jpg", 
+    "/img/hero3.jpg",
+    "/img/hero4.jpg",
+    "/img/hero5.jpg",
+    "/img/hero6.jpg"
+  ],
+  "gallery": [
+    { "src": "/img/gallery1.jpg", "alt": "Bungalow exterior with tropical garden" },
+    { "src": "/img/gallery2.jpg", "alt": "Interior living space with kitchenette" },
+    { "src": "/img/gallery3.jpg", "alt": "Private terrace with small pool" },
+    { "src": "/img/gallery4.jpg", "alt": "Bathroom with shower facilities" },
+    { "src": "/img/gallery5.jpg", "alt": "Peaceful garden setting with bikes" }
+  ],
+  "amenities": [
+    "2 bikes at your disposal",
+    "Private pool on terrace", 
+    "Fan and mosquito net",
+    "Wi-Fi",
+    "Kitchenette",
+    "Private bathroom with shower",
+    "Private terrace",
+    "Peaceful garden setting",
+    "200m from supermarket",
+    "200m from lagoon",
+    "5 min from city center",
+    "10 min from airport",
+    "30 min boat to Taha'a",
+    "No traffic noise",
+    "Green accommodation",
+    "Functional decor"
+  ],
+  "maxGuests": 2,
+  "bedrooms": 1,
+  "beds": 1,
+  "baths": 1,
+  "nightlyFrom": 85,
+  "description": "Relax in this simple, new and green accommodation. Located 5 minutes from the city center, 200 meters from a supermarket and the lagoon, it will allow you to enjoy a peaceful pied à terre close to many amenities. Two bikes are at your disposal, as well as a small swimming pool to cool off.",
+  "aboutDetails": "Simple and functional accommodation, nicely decorated. The main room is composed of a sleeping area, a living room area and a kitchenette. The bathroom is equipped with a shower and toilet. The terrace is equipped with a small pool to refresh you. The property consists of 2 bungalows and a house in which the owner resides. The garden is spacious and peaceful (no traffic noise). Each tenant has its own space."
+}
