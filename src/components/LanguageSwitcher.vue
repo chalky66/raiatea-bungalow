@@ -27,22 +27,18 @@ export default {
     return {
       currentLocale: locale,
       changeLanguage(event) {
-        locale.value = event.target.value
-        // Save to localStorage
-        localStorage.setItem('preferred-language', event.target.value)
+        const newLanguage = event.target.value
+        locale.value = newLanguage
+        // Save to localStorage (using same key as i18n.js)
+        localStorage.setItem('user-language', newLanguage)
         // Update HTML lang attribute
-        document.documentElement.lang = event.target.value
+        document.documentElement.lang = newLanguage
       }
     }
   },
   mounted() {
-    // Check for saved language preference
-    const savedLanguage = localStorage.getItem('preferred-language')
-    if (savedLanguage && ['en', 'fr'].includes(savedLanguage)) {
-      this.currentLocale = savedLanguage
-      this.$i18n.locale = savedLanguage
-      document.documentElement.lang = savedLanguage
-    }
+    // The language is already set by i18n.js, just update HTML lang attribute
+    document.documentElement.lang = this.$i18n.locale
   }
 }
 </script>
