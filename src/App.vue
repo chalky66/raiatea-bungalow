@@ -5,16 +5,11 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
         <div class="flex items-center justify-between">
           <div>
-            <h1 class="text-2xl font-bold text-gray-900">{{ property.title }}</h1>
-            <p class="text-gray-600">📍 {{ property.location }}</p>
+            <h1 class="text-2xl font-bold text-gray-900">{{ currentProperty.title }}</h1>
+            <p class="text-gray-600">📍 {{ currentProperty.location }}</p>
           </div>
-          <div class="hidden md:flex items-center space-x-4">
-            <button class="text-gray-600 hover:text-gray-900 btn-transition">
-              Share
-            </button>
-            <button class="text-gray-600 hover:text-gray-900 btn-transition">
-              ❤️ Save
-            </button>
+          <div class="flex items-center">
+            <LanguageSwitcher />
           </div>
         </div>
       </div>
@@ -42,19 +37,19 @@
 
           <!-- About Section -->
           <section class="bg-white rounded-2xl p-6 card-shadow">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">About this place</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('property.aboutThisPlace') }}</h2>
             <div class="space-y-4 text-gray-700 leading-relaxed">
-              <p>{{ property.description }}</p>
-              <p>{{ property.aboutDetails }}</p>
+              <p>{{ currentProperty.description }}</p>
+              <p>{{ currentProperty.aboutDetails }}</p>
             </div>
           </section>
 
           <!-- Amenities -->
           <section class="bg-white rounded-2xl p-6 card-shadow">
-            <h2 class="text-2xl font-semibold text-gray-900 mb-4">What this place offers</h2>
+            <h2 class="text-2xl font-semibold text-gray-900 mb-4">{{ $t('property.amenities') }}</h2>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
               <div
-                v-for="amenity in property.amenities"
+                v-for="amenity in currentProperty.amenities"
                 :key="amenity"
                 class="flex items-center space-x-3 py-2"
               >
@@ -68,8 +63,8 @@
           <section>
             <MapLeaflet
               :coords="property.coords"
-              :address="property.address"
-              :title="property.title"
+              :address="currentProperty.address"
+              :title="currentProperty.title"
             />
           </section>
         </div>
@@ -83,45 +78,6 @@
         </div>
       </div>
     </main>
-
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 mt-16">
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div>
-            <h3 class="font-semibold text-gray-900 mb-4">Support</h3>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li><a href="#" class="hover:text-gray-900 btn-transition">Help Center</a></li>
-              <li><a href="#" class="hover:text-gray-900 btn-transition">Safety information</a></li>
-              <li><a href="#" class="hover:text-gray-900 btn-transition">Cancellation options</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold text-gray-900 mb-4">Community</h3>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li><a href="#" class="hover:text-gray-900 btn-transition">Airbnb.org</a></li>
-              <li><a href="#" class="hover:text-gray-900 btn-transition">Diversity & Belonging</a></li>
-              <li><a href="#" class="hover:text-gray-900 btn-transition">Accessibility</a></li>
-            </ul>
-          </div>
-          <div>
-            <h3 class="font-semibold text-gray-900 mb-4">Hosting</h3>
-            <ul class="space-y-2 text-sm text-gray-600">
-              <li><a href="#" class="hover:text-gray-900 btn-transition">Become a Host</a></li>
-              <li><a href="#" class="hover:text-gray-900 btn-transition">Host your home</a></li>
-              <li><a href="#" class="hover:text-gray-900 btn-transition">Resource Center</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="border-t border-gray-200 mt-8 pt-8 text-center">
-          <p class="text-sm text-gray-600">
-            © {{ currentYear }} Villa Tiare. All rights reserved. | 
-            <a href="#" class="hover:text-gray-900 btn-transition">Privacy</a> · 
-            <a href="#" class="hover:text-gray-900 btn-transition">Terms</a>
-          </p>
-        </div>
-      </div>
-    </footer>
   </div>
 </template>
 
@@ -130,7 +86,9 @@ import GalleryCarousel from './components/GalleryCarousel.vue'
 import PropertyFacts from './components/PropertyFacts.vue'
 import MapLeaflet from './components/MapLeaflet.vue'
 import AvailabilityCard from './components/AvailabilityCard.vue'
+import LanguageSwitcher from './components/LanguageSwitcher.vue'
 import propertyData from './data/property.json'
+import propertyI18n from './data/property-i18n.json'
 
 export default {
   name: 'App',
@@ -138,16 +96,25 @@ export default {
     GalleryCarousel,
     PropertyFacts,
     MapLeaflet,
-    AvailabilityCard
+    AvailabilityCard,
+    LanguageSwitcher
   },
   data() {
     return {
-      property: propertyData
+      property: propertyData,
+      propertyI18n: propertyI18n
     }
   },
   computed: {
     currentYear() {
       return new Date().getFullYear()
+    },
+    currentProperty() {
+      const locale = this.$i18n.locale
+      return {
+        ...this.property,
+        ...this.propertyI18n[locale]
+      }
     }
   },
   mounted() {

@@ -1,0 +1,107 @@
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 14px; max-width: 600px; margin: 0 auto;">
+  <div style="background-color: #f8f9fa; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+    <h2 style="color: #2c3e50; margin: 0;">{{subject}}</h2>
+    <p style="color: #666; margin: 5px 0 0 0;">New booking request received</p>
+  </div>
+
+  <div style="margin-bottom: 25px;">
+    <table role="presentation" style="width: 100%; border-collapse: collapse;">
+      <tr>
+        <td style="vertical-align: top; width: 60px;">
+          <div style="padding: 6px 10px; background-color: #e8f5e8; border-radius: 5px; font-size: 24px; text-align: center;" role="img">
+            🏠
+          </div>
+        </td>
+        <td style="vertical-align: top; padding-left: 15px;">
+          <div style="color: #2c3e50; font-size: 18px; font-weight: bold;">
+            {{property}}
+          </div>
+          <div style="color: #666; font-size: 13px; margin-top: 2px;">
+            Submitted on {{timestamp}} | Language: {{language}}
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="background-color: #fff; border: 1px solid #e1e5e9; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+    <h3 style="color: #2c3e50; margin: 0 0 15px 0; font-size: 16px;">Guest Contact Information</h3>
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 8px 0; color: #666;">Name:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{contact_name}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 8px 0; color: #666;">Email:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{contact_email}}</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 0; color: #666;">Phone:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{contact_phone}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="background-color: #fff; border: 1px solid #e1e5e9; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+    <h3 style="color: #2c3e50; margin: 0 0 15px 0; font-size: 16px;">Booking Details</h3>
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 8px 0; color: #666;">Check-in:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{check_in}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 8px 0; color: #666;">Check-out:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{check_out}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 8px 0; color: #666;">Guests:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{guests}}</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 0; color: #666;">Nights:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{nights}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="background-color: #fff; border: 1px solid #e1e5e9; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+    <h3 style="color: #2c3e50; margin: 0 0 15px 0; font-size: 16px;">Pricing Breakdown</h3>
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 6px 0; color: #666;">Accommodation:</td>
+        <td style="padding: 6px 0; text-align: right;">€{{subtotal}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 6px 0; color: #666;">Service Fee:</td>
+        <td style="padding: 6px 0; text-align: right;">€{{service_fee}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 6px 0; color: #666;">Taxes:</td>
+        <td style="padding: 6px 0; text-align: right;">€{{taxes}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 6px 0; color: #666;">Extras:</td>
+        <td style="padding: 6px 0; text-align: right;">€{{extras_total}}</td>
+      </tr>
+      <tr style="background-color: #f8f9fa;">
+        <td style="padding: 10px 6px; font-weight: bold; color: #2c3e50;">Total:</td>
+        <td style="padding: 10px 6px; text-align: right; font-weight: bold; color: #2c3e50; font-size: 18px;">€{{total}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="background-color: #fff; border: 1px solid #e1e5e9; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+    <h3 style="color: #2c3e50; margin: 0 0 10px 0; font-size: 16px;">Selected Extras</h3>
+    <p style="margin: 0; color: #666;">{{selected_extras}}</p>
+  </div>
+
+  <div style="background-color: #e8f4fd; border: 1px solid #bee5eb; border-radius: 8px; padding: 15px;">
+    <p style="margin: 0; color: #0c5460; font-size: 14px;">
+      <strong>Next Steps:</strong> Please confirm availability for these dates and respond with booking confirmation details.
+    </p>
+  </div>
+
+  <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #e1e5e9; text-align: center; color: #666; font-size: 12px;">
+    Raiatea Bungalow - French Polynesia
+  </div>
+</div>

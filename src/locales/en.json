@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "share": "Share",
+    "save": "Save"
+  },
+  "property": {
+    "guests": "guests",
+    "bedrooms": "bedrooms", 
+    "beds": "beds",
+    "bathrooms": "bathrooms",
+    "location": "Location",
+    "amenities": "What this place offers",
+    "availability": "Availability",
+    "checkIn": "Check in",
+    "checkOut": "Check out",
+    "reserve": "Reserve",
+    "perNight": "per night",
+    "total": "Total",
+    "instantBook": "Instant Book",
+    "contact": "Contact Host",
+    "description": "About this space",
+    "aboutThisPlace": "About this place"
+  },
+  "amenities": {
+    "bikes": "2 bikes at your disposal",
+    "pool": "Private pool on terrace",
+    "fan": "Fan and mosquito net", 
+    "wifi": "Wi-Fi",
+    "kitchenette": "Kitchenette",
+    "bathroom": "Private bathroom with shower",
+    "terrace": "Private terrace",
+    "garden": "Garden view",
+    "parking": "Free parking on premises",
+    "cleaning": "Cleaning products",
+    "towels": "Towels and bed sheets",
+    "essentials": "Basic essentials",
+    "fridge": "Refrigerator",
+    "microwave": "Microwave",
+    "coffee": "Coffee maker",
+    "dishes": "Dishes and silverware"
+  },
+  "location": {
+    "address": "5 minutes from city center, Raiatea, French Polynesia",
+    "description": "Located in the heart of Raiatea, this charming bungalow offers easy access to local attractions while maintaining privacy in a peaceful garden setting."
+  },
+  "booking": {
+    "selectDates": "Select dates",
+    "guestsLabel": "Guests",
+    "night": "night",
+    "nights": "nights",
+    "reserveOnAirbnb": "Reserve on Airbnb",
+    "enterDatesFirst": "To reserve, please enter the desired dates",
+    "pricing": {
+      "baseRate": "Base rate",
+      "cleaningFee": "Cleaning fee", 
+      "serviceFee": "Service fee",
+      "taxes": "Taxes"
+    },
+    "extras": {
+      "title": "Extras",
+      "airportPickup": "Airport pickup",
+      "kayakHire": "Kayak hire",
+      "subtotal": "Extras subtotal"
+    },
+    "success": "Booking request sent successfully! We will contact you soon to confirm your reservation.",
+    "error": "Sorry, there was an error sending your booking request. Please try again or contact us directly.",
+    "confirmation": {
+      "title": "Confirm Your Booking",
+      "message": "Please provide your contact information to complete the booking request.",
+      "name": "Full Name",
+      "namePlaceholder": "Enter your full name",
+      "email": "Email Address",
+      "emailPlaceholder": "Enter your email address",
+      "phone": "Phone Number (Optional)",
+      "phonePlaceholder": "Enter your phone number",
+      "submit": "Send Booking Request",
+      "cancel": "Cancel"
+    },
+    "email": {
+      "subject": "Booking Request - Raiatea Bungalow",
+      "details": "Booking Request Details",
+      "property": "Property",
+      "checkIn": "Check-in",
+      "checkOut": "Check-out",
+      "guests": "Guests",
+      "nights": "Nights",
+      "pricingBreakdown": "Pricing Breakdown",
+      "accommodation": "Accommodation",
+      "selectedExtras": "Selected Extras",
+      "submitted": "Submitted",
+      "confirmationRequest": "Please confirm availability for these dates and respond with booking confirmation details."
+    },
+    "popup": {
+      "title": "Better Price Available!",
+      "message": "If you book direct rather than using Airbnb, you can lock in a better price. However, if you prefer, you are free to continue to book on Airbnb.",
+      "continueToAirbnb": "Continue to Airbnb",
+      "cancel": "Cancel"
+    }
+  }
+}

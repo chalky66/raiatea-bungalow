@@ -3,8 +3,8 @@
   "location": "Raiatea, French Polynesia",
   "address": "5 minutes from city center, Raiatea, French Polynesia",
   "coords": { 
-    "lat": -16.8312, 
-    "lng": -151.4264 
+    "lat": -16.747233, 
+    "lng": -151.438433 
   },
   "heroImages": [
     "/img/hero1.jpg", 
@@ -43,7 +43,8 @@
   "bedrooms": 1,
   "beds": 1,
   "baths": 1,
-  "nightlyFrom": 85,
+  "nightlyFrom": 78,
+  "currency": "EUR",
   "description": "Relax in this simple, new and green accommodation. Located 5 minutes from the city center, 200 meters from a supermarket and the lagoon, it will allow you to enjoy a peaceful pied à terre close to many amenities. Two bikes are at your disposal, as well as a small swimming pool to cool off.",
   "aboutDetails": "Simple and functional accommodation, nicely decorated. The main room is composed of a sleeping area, a living room area and a kitchenette. The bathroom is equipped with a shower and toilet. The terrace is equipped with a small pool to refresh you. The property consists of 2 bungalows and a house in which the owner resides. The garden is spacious and peaceful (no traffic noise). Each tenant has its own space."
 }

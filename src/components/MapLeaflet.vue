@@ -1,6 +1,6 @@
 <template>
   <div class="bg-white rounded-2xl p-6 card-shadow">
-    <h3 class="text-xl font-semibold text-gray-900 mb-4">Location</h3>
+    <h3 class="text-xl font-semibold text-gray-900 mb-4">{{ $t('property.location') }}</h3>
     <p class="text-gray-600 mb-4">{{ address }}</p>
     <div ref="mapContainer" class="leaflet-container"></div>
   </div>
@@ -51,6 +51,14 @@ export default {
       this.map.remove()
     }
   },
+  watch: {
+    title() {
+      this.updatePopup()
+    },
+    address() {
+      this.updatePopup()
+    }
+  },
   methods: {
     initMap() {
       // Initialize the map
@@ -83,6 +91,16 @@ export default {
       setTimeout(() => {
         this.map.invalidateSize()
       }, 100)
+    },
+    updatePopup() {
+      if (this.marker) {
+        this.marker.bindPopup(`
+          <div class="text-center">
+            <strong class="block text-sm font-semibold">${this.title}</strong>
+            <span class="text-xs text-gray-600">${this.address}</span>
+          </div>
+        `)
+      }
     }
   }
 }

@@ -1,0 +1,100 @@
+{
+  "nav": {
+    "share": "Partager",
+    "save": "Sauvegarder"
+  },
+  "property": {
+    "guests": "voyageurs",
+    "bedrooms": "chambres",
+    "beds": "lits", 
+    "bathrooms": "salles de bain",
+    "location": "Emplacement",
+    "amenities": "Ce que propose ce logement",
+    "availability": "Disponibilité",
+    "checkIn": "Arrivée",
+    "checkOut": "Départ", 
+    "reserve": "Réserver",
+    "perNight": "par nuit",
+    "total": "Total",
+    "instantBook": "Réservation instantanée",
+    "contact": "Contacter l'hôte",
+    "description": "À propos de ce logement",
+    "aboutThisPlace": "À propos de ce lieu"
+  },
+  "amenities": {
+    "bikes": "2 vélos à votre disposition",
+    "pool": "Piscine privée sur terrasse",
+    "fan": "Ventilateur et moustiquaire",
+    "wifi": "Wi-Fi",
+    "kitchenette": "Kitchenette", 
+    "bathroom": "Salle de bain privée avec douche",
+    "terrace": "Terrasse privée",
+    "garden": "Vue sur jardin",
+    "parking": "Parking gratuit sur place",
+    "cleaning": "Produits de nettoyage",
+    "towels": "Serviettes et draps",
+    "essentiels": "Produits de base",
+    "fridge": "Réfrigérateur",
+    "microwave": "Micro-ondes", 
+    "coffee": "Cafetière",
+    "dishes": "Vaisselle et couverts"
+  },
+  "location": {
+    "address": "À 5 minutes du centre-ville, Raiatea, Polynésie française",
+    "description": "Situé au cœur de Raiatea, ce charmant bungalow offre un accès facile aux attractions locales tout en préservant l'intimité dans un cadre de jardin paisible."
+  },
+  "booking": {
+    "selectDates": "Sélectionner les dates",
+    "guestsLabel": "Voyageurs",
+    "night": "nuit",
+    "nights": "nuits",
+    "reserveOnAirbnb": "Réserver sur Airbnb",
+    "enterDatesFirst": "Pour réserver, veuillez entrer les dates souhaitées",
+    "pricing": {
+      "baseRate": "Tarif de base",
+      "cleaningFee": "Frais de ménage",
+      "serviceFee": "Frais de service",
+      "taxes": "Taxes"
+    },
+    "extras": {
+      "title": "Suppléments",
+      "airportPickup": "Transfert aéroport",
+      "kayakHire": "Location kayak",
+      "subtotal": "Sous-total suppléments"
+    },
+    "success": "Demande de réservation envoyée avec succès ! Nous vous recontacterons bientôt pour confirmer votre réservation.",
+    "error": "Désolé, une erreur s'est produite lors de l'envoi de votre demande de réservation. Veuillez réessayer ou nous contacter directement.",
+    "confirmation": {
+      "title": "Confirmer Votre Réservation",
+      "message": "Veuillez fournir vos informations de contact pour compléter la demande de réservation.",
+      "name": "Nom Complet",
+      "namePlaceholder": "Entrez votre nom complet",
+      "email": "Adresse Email",
+      "emailPlaceholder": "Entrez votre adresse email",
+      "phone": "Numéro de Téléphone (Optionnel)",
+      "phonePlaceholder": "Entrez votre numéro de téléphone",
+      "submit": "Envoyer la Demande",
+      "cancel": "Annuler"
+    },
+    "email": {
+      "subject": "Demande de Réservation - Bungalow Raiatea",
+      "details": "Détails de la Demande de Réservation",
+      "property": "Propriété",
+      "checkIn": "Arrivée",
+      "checkOut": "Départ",
+      "guests": "Voyageurs",
+      "nights": "Nuits",
+      "pricingBreakdown": "Détail des Prix",
+      "accommodation": "Hébergement",
+      "selectedExtras": "Suppléments Sélectionnés",
+      "submitted": "Soumis le",
+      "confirmationRequest": "Veuillez confirmer la disponibilité pour ces dates et répondre avec les détails de confirmation de réservation."
+    },
+    "popup": {
+      "title": "Meilleur Prix Disponible!",
+      "message": "Si vous réservez directement plutôt que d'utiliser Airbnb, vous pouvez obtenir un meilleur prix. Cependant, si vous préférez, vous êtes libre de continuer à réserver sur Airbnb.",
+      "continueToAirbnb": "Continuer vers Airbnb",
+      "cancel": "Annuler"
+    }
+  }
+}

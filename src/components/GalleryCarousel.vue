@@ -17,8 +17,8 @@
       </div>
       
       <!-- Navigation arrows -->
-      <div class="swiper-button-next after:text-white after:text-xl after:font-bold"></div>
-      <div class="swiper-button-prev after:text-white after:text-xl after:font-bold"></div>
+      <div class="swiper-button-next">></div>
+      <div class="swiper-button-prev"><</div>
       
       <!-- Pagination dots -->
       <div class="swiper-pagination"></div>
@@ -107,6 +107,11 @@ export default {
   height: 44px;
   border-radius: 50%;
   transition: all 0.3s ease;
+  font-size: 20px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 :deep(.swiper-button-next:hover),
@@ -117,8 +122,7 @@ export default {
 
 :deep(.swiper-button-next::after),
 :deep(.swiper-button-prev::after) {
-  font-size: 16px;
-  font-weight: bold;
+  content: '';
 }
 
 :deep(.swiper-pagination) {
