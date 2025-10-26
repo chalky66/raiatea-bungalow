@@ -7,19 +7,19 @@
     "lng": -151.438433 
   },
   "heroImages": [
-    "/img/hero1.jpg", 
-    "/img/hero2.jpg", 
-    "/img/hero3.jpg",
-    "/img/hero4.jpg",
-    "/img/hero5.jpg",
-    "/img/hero6.jpg"
+    "img/hero1.jpg", 
+    "img/hero2.jpg", 
+    "img/hero3.jpg",
+    "img/hero4.jpg",
+    "img/hero5.jpg",
+    "img/hero6.jpg"
   ],
   "gallery": [
-    { "src": "/img/gallery1.jpg", "alt": "Bungalow exterior with tropical garden" },
-    { "src": "/img/gallery2.jpg", "alt": "Interior living space with kitchenette" },
-    { "src": "/img/gallery3.jpg", "alt": "Private terrace with small pool" },
-    { "src": "/img/gallery4.jpg", "alt": "Bathroom with shower facilities" },
-    { "src": "/img/gallery5.jpg", "alt": "Peaceful garden setting with bikes" }
+    { "src": "img/gallery1.jpg", "alt": "Bungalow exterior with tropical garden" },
+    { "src": "img/gallery2.jpg", "alt": "Interior living space with kitchenette" },
+    { "src": "img/gallery3.jpg", "alt": "Private terrace with small pool" },
+    { "src": "img/gallery4.jpg", "alt": "Bathroom with shower facilities" },
+    { "src": "img/gallery5.jpg", "alt": "Peaceful garden setting with bikes" }
   ],
   "amenities": [
     "2 bikes at your disposal",

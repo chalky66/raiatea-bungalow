@@ -22,7 +22,7 @@
         <div class="lg:col-span-2 space-y-8">
           <!-- Hero Gallery -->
           <section>
-            <GalleryCarousel :images="property.heroImages" />
+            <GalleryCarousel :images="resolvedHeroImages" />
           </section>
 
           <!-- Property Facts -->
@@ -115,6 +115,27 @@ export default {
         ...this.property,
         ...this.propertyI18n[locale]
       }
+    },
+    resolvedHeroImages() {
+      return this.property.heroImages.map(img => this.resolveImageUrl(img))
+    },
+    resolvedGallery() {
+      return this.property.gallery.map(item => ({
+        ...item,
+        src: this.resolveImageUrl(item.src)
+      }))
+    }
+  },
+  methods: {
+    resolveImageUrl(url) {
+      // Handle already resolved URLs
+      if (url.startsWith('http') || url.startsWith('//')) {
+        return url
+      }
+      // For relative URLs, use import.meta.env.BASE_URL
+      const baseUrl = import.meta.env.BASE_URL || '/'
+      const cleanUrl = url.startsWith('/') ? url.slice(1) : url
+      return `${baseUrl}${cleanUrl}`
     }
   },
   mounted() {
