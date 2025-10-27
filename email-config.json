@@ -1,0 +1,16 @@
+{
+  "smtp": {
+    "host": "smtp.gmail.com",
+    "port": 587,
+    "secure": false,
+    "auth": {
+      "user": "bungalowtehei@gmail.com",
+      "pass": "owlp jgcn czmw oycb"
+    }
+  },
+  "emailSettings": {
+    "from": "bungalowtehei@gmail.com",
+    "to": "chalky66@gmail.com",
+    "subject": "New Booking Request - Raiatea Bungalow"
+  }
+}
