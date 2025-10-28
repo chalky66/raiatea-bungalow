@@ -62,7 +62,6 @@
       "kayakHire": "Kayak hire",
       "subtotal": "Extras subtotal"
     },
-    "success": "Booking request sent successfully! We will contact you soon to confirm your reservation.",
     "error": "Sorry, there was an error sending your booking request. Please try again or contact us directly.",
     "confirmation": {
       "title": "Confirm Your Booking",
@@ -75,6 +74,12 @@
       "phonePlaceholder": "Enter your phone number",
       "submit": "Send Booking Request",
       "cancel": "Cancel"
+    },
+    "success": {
+      "title": "Booking Request Sent!",
+      "message": "Thank you! Your booking request has been successfully submitted.",
+      "emailSent": "You will receive a confirmation email shortly, and we'll get back to you within 24 hours.",
+      "close": "Close"
     },
     "email": {
       "subject": "Booking Request - Raiatea Bungalow",

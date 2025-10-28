@@ -62,7 +62,6 @@
       "kayakHire": "Location kayak",
       "subtotal": "Sous-total suppléments"
     },
-    "success": "Demande de réservation envoyée avec succès ! Nous vous recontacterons bientôt pour confirmer votre réservation.",
     "error": "Désolé, une erreur s'est produite lors de l'envoi de votre demande de réservation. Veuillez réessayer ou nous contacter directement.",
     "confirmation": {
       "title": "Confirmer Votre Réservation",
@@ -75,6 +74,12 @@
       "phonePlaceholder": "Entrez votre numéro de téléphone",
       "submit": "Envoyer la Demande",
       "cancel": "Annuler"
+    },
+    "success": {
+      "title": "Demande de Réservation Envoyée !",
+      "message": "Merci ! Votre demande de réservation a été soumise avec succès.",
+      "emailSent": "Vous recevrez un email de confirmation sous peu, et nous vous répondrons dans les 24 heures.",
+      "close": "Fermer"
     },
     "email": {
       "subject": "Demande de Réservation - Bungalow Raiatea",

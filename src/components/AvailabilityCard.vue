@@ -262,6 +262,34 @@
         </div>
       </div>
     </Teleport>
+    
+    <!-- Booking Success Popup Modal -->
+    <Teleport to="body">
+      <div v-if="showSuccessPopup" 
+           class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center px-4"
+           style="z-index: 100000;">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full shadow-xl">
+          <div class="text-center">
+            <div class="mb-4">
+              <span class="text-6xl">✅</span>
+            </div>
+            <h3 class="text-2xl font-bold text-gray-900 mb-4">{{ $t('booking.success.title') }}</h3>
+            <p class="text-gray-600 mb-4 leading-relaxed">
+              {{ $t('booking.success.message') }}
+            </p>
+            <p class="text-gray-600 mb-6 text-sm">
+              {{ $t('booking.success.emailSent') }}
+            </p>
+            <button
+              @click="showSuccessPopup = false"
+              class="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-3 px-6 rounded-lg btn-transition"
+            >
+              {{ $t('booking.success.close') }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </Teleport>
   </div>
 </template>
 
@@ -287,6 +315,7 @@ export default {
       showDateToast: false,
       showExtras: false,
       showConfirmationPopup: false,
+      showSuccessPopup: false,
       userContact: {
         name: '',
         email: '',
@@ -433,10 +462,12 @@ export default {
           // Close confirmation popup
           this.showConfirmationPopup = false
           
+          // Show success popup
+          this.showSuccessPopup = true
+          
           // Reset contact form
           this.userContact = { name: '', email: '', phone: '' }
           
-          alert(this.$t('booking.success'))
           // Keep booking form data intact for user convenience
         } else {
           throw new Error('Failed to send email')
