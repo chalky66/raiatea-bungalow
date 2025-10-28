@@ -418,10 +418,16 @@ export default {
         
         console.log('Owner notification sent:', ownerResult)
         
-        // For now, only send to owner
-        // To send customer confirmation, create a second template in EmailJS dashboard
-        // with recipient set to {{contact_email}} dynamic field
-        const customerResult = { status: 200 } // Placeholder until second template is created
+        // Send booking confirmation to customer
+        // Uses separate template (template_8c6vq5g) with recipient set to {{contact_email}}
+        const customerResult = await emailjs.send(
+          config.emailjs.serviceId,
+          config.emailjs.customerTemplateId,
+          templateParams,
+          config.emailjs.publicKey
+        )
+        
+        console.log('Customer confirmation sent:', customerResult)
         
         if (ownerResult.status === 200 && customerResult.status === 200) {
           // Close confirmation popup

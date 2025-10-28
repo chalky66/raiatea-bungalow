@@ -1,0 +1,113 @@
+<div style="font-family: system-ui, sans-serif, Arial; font-size: 14px; max-width: 600px; margin: 0 auto;">
+  <div style="background-color: #e8f5e8; padding: 20px; border-radius: 8px; margin-bottom: 20px;">
+    <h2 style="color: #2c3e50; margin: 0;">Booking Request Received</h2>
+    <p style="color: #666; margin: 5px 0 0 0;">Thank you for your interest in Raiatea Bungalow!</p>
+  </div>
+
+  <div style="margin-bottom: 25px;">
+    <p style="color: #2c3e50; font-size: 15px; line-height: 1.6;">
+      Dear {{contact_name}},
+    </p>
+    <p style="color: #2c3e50; font-size: 15px; line-height: 1.6;">
+      We have received your booking request for <strong>{{property}}</strong> and will review it shortly. 
+      We will get back to you within 24 hours to confirm availability and provide further details.
+    </p>
+  </div>
+
+  <div style="background-color: #fff; border: 1px solid #e1e5e9; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+    <h3 style="color: #2c3e50; margin: 0 0 15px 0; font-size: 16px;">Your Booking Summary</h3>
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 8px 0; color: #666;">Property:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{property}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 8px 0; color: #666;">Check-in:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{check_in}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 8px 0; color: #666;">Check-out:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{check_out}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 8px 0; color: #666;">Guests:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{guests}}</td>
+      </tr>
+      <tr>
+        <td style="padding: 8px 0; color: #666;">Nights:</td>
+        <td style="padding: 8px 0; font-weight: bold;">{{nights}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="background-color: #fff; border: 1px solid #e1e5e9; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+    <h3 style="color: #2c3e50; margin: 0 0 15px 0; font-size: 16px;">Pricing Estimate</h3>
+    <table style="width: 100%; border-collapse: collapse;">
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 6px 0; color: #666;">Accommodation:</td>
+        <td style="padding: 6px 0; text-align: right;">€{{subtotal}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 6px 0; color: #666;">Service Fee:</td>
+        <td style="padding: 6px 0; text-align: right;">€{{service_fee}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 6px 0; color: #666;">Taxes:</td>
+        <td style="padding: 6px 0; text-align: right;">€{{taxes}}</td>
+      </tr>
+      <tr style="border-bottom: 1px solid #f1f3f4;">
+        <td style="padding: 6px 0; color: #666;">Extras:</td>
+        <td style="padding: 6px 0; text-align: right;">€{{extras_total}}</td>
+      </tr>
+      <tr style="background-color: #f8f9fa;">
+        <td style="padding: 10px 6px; font-weight: bold; color: #2c3e50;">Estimated Total:</td>
+        <td style="padding: 10px 6px; text-align: right; font-weight: bold; color: #2c3e50; font-size: 18px;">€{{total}}</td>
+      </tr>
+    </table>
+  </div>
+
+  <div style="background-color: #fff; border: 1px solid #e1e5e9; border-radius: 8px; padding: 20px; margin-bottom: 20px;">
+    <h3 style="color: #2c3e50; margin: 0 0 10px 0; font-size: 16px;">Selected Extras</h3>
+    <p style="margin: 0; color: #666;">{{selected_extras}}</p>
+  </div>
+
+  <div style="background-color: #fff3cd; border: 1px solid #ffc107; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
+    <p style="margin: 0 0 10px 0; color: #856404; font-size: 14px;">
+      <strong>⏳ Pending Confirmation</strong>
+    </p>
+    <p style="margin: 0; color: #856404; font-size: 13px; line-height: 1.5;">
+      This is not a confirmed booking yet. We will check availability for your requested dates and send you a confirmation email with payment details and check-in instructions.
+    </p>
+  </div>
+
+  <div style="background-color: #e8f4fd; border: 1px solid #bee5eb; border-radius: 8px; padding: 15px; margin-bottom: 20px;">
+    <p style="margin: 0 0 10px 0; color: #0c5460; font-size: 14px;">
+      <strong>Your Contact Information:</strong>
+    </p>
+    <p style="margin: 0; color: #0c5460; font-size: 13px; line-height: 1.5;">
+      Email: {{contact_email}}<br>
+      Phone: {{contact_phone}}
+    </p>
+    <p style="margin: 10px 0 0 0; color: #0c5460; font-size: 13px;">
+      We will use this information to contact you regarding your booking.
+    </p>
+  </div>
+
+  <div style="margin-bottom: 20px;">
+    <p style="color: #2c3e50; font-size: 14px; line-height: 1.6;">
+      If you have any questions or need to modify your request, please reply to this email.
+    </p>
+    <p style="color: #2c3e50; font-size: 14px; line-height: 1.6;">
+      We look forward to welcoming you to our beautiful bungalow in French Polynesia!
+    </p>
+    <p style="color: #2c3e50; font-size: 14px; margin-top: 15px;">
+      Best regards,<br>
+      <strong>Raiatea Bungalow Team</strong>
+    </p>
+  </div>
+
+  <div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #e1e5e9; text-align: center; color: #666; font-size: 12px;">
+    Raiatea Bungalow - French Polynesia<br>
+    <span style="font-size: 11px;">Request submitted on {{timestamp}}</span>
+  </div>
+</div>
