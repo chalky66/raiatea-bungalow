@@ -378,11 +378,15 @@ export default {
       try {
         // Load EmailJS configuration and send email directly from browser
         const emailjs = await import('@emailjs/browser')
-        const configResponse = await fetch('/emailjs-config.json')
+        const baseUrl = import.meta.env.BASE_URL || '/'
+        const configResponse = await fetch(`${baseUrl}emailjs-config.json`)
         const config = await configResponse.json()
         
+        // Template parameters - all booking details
         const templateParams = {
           from_name: 'Raiatea Bungalow Website',
+          reply_to: bookingDetails.contactEmail,
+          to_name: 'Bungalow Tehei',
           subject: this.$t('booking.email.subject'),
           property: bookingDetails.property,
           check_in: bookingDetails.checkIn,
@@ -397,20 +401,29 @@ export default {
           total: bookingDetails.total,
           timestamp: bookingDetails.timestamp,
           language: this.$i18n.locale,
-          // Add contact information to email
           contact_name: bookingDetails.contactName,
           contact_email: bookingDetails.contactEmail,
           contact_phone: bookingDetails.contactPhone
         }
         
-        const result = await emailjs.send(
+        // Send booking notification to owner (bungalowtehei@gmail.com)
+        // Note: The recipient email should be configured in the EmailJS template settings
+        // to send to bungalowtehei@gmail.com instead of chalky66@gmail.com
+        const ownerResult = await emailjs.send(
           config.emailjs.serviceId,
           config.emailjs.templateId,
           templateParams,
           config.emailjs.publicKey
         )
         
-        if (result.status === 200) {
+        console.log('Owner notification sent:', ownerResult)
+        
+        // For now, only send to owner
+        // To send customer confirmation, create a second template in EmailJS dashboard
+        // with recipient set to {{contact_email}} dynamic field
+        const customerResult = { status: 200 } // Placeholder until second template is created
+        
+        if (ownerResult.status === 200 && customerResult.status === 200) {
           // Close confirmation popup
           this.showConfirmationPopup = false
           

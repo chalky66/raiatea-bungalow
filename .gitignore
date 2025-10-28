@@ -31,7 +31,6 @@ logs/
 
 # Email configuration (contains sensitive credentials)
 email-config.json
-public/emailjs-config.json
 
 # Environment variables
 .env
