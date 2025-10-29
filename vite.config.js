@@ -8,7 +8,8 @@ export default defineConfig({
   build: {
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'landing.html'),
+        main: resolve(__dirname, 'index.html'),
+        landing: resolve(__dirname, 'landing.html'),
         pool: resolve(__dirname, 'bungalow-with-pool.html'),
         standard: resolve(__dirname, 'bungalow.html')
       }
