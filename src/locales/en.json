@@ -1,4 +1,27 @@
 {
+  "landing": {
+    "title": "Raiatea Bungalows",
+    "location": "Raiatea, French Polynesia",
+    "subtitle": "Choose Your Perfect Bungalow",
+    "description": "Experience authentic island living in our peaceful garden setting",
+    "poolBungalow": {
+      "name": "Bungalow with Pool",
+      "description": "Relax with your own private swimming pool on the terrace",
+      "feature1": "Private pool on terrace",
+      "feature2": "2 bikes included",
+      "feature3": "Peaceful garden setting"
+    },
+    "standardBungalow": {
+      "name": "Bungalow",
+      "description": "Simple and green accommodation in a tranquil environment",
+      "feature1": "Peaceful garden setting",
+      "feature2": "2 bikes included",
+      "feature3": "Private terrace"
+    },
+    "viewProperty": "View Details & Book",
+    "contactInfo": "Both bungalows are located on the same peaceful property, 5 minutes from city center",
+    "footer": "Raiatea Bungalows - French Polynesia"
+  },
   "nav": {
     "share": "Share",
     "save": "Save"

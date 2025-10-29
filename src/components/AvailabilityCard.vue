@@ -304,6 +304,10 @@ export default {
     maxGuests: {
       type: Number,
       required: true
+    },
+    propertyName: {
+      type: String,
+      default: 'Raiatea Bungalow'
     }
   },
   data() {
@@ -386,7 +390,8 @@ export default {
       if (this.selectedExtras.kayakHire) selectedExtrasDetails.push('Kayak hire - €10')
       
       const bookingDetails = {
-        property: 'Raiatea Bungalow - French Polynesia',
+        property: this.propertyName,
+        propertyLocation: 'Raiatea, French Polynesia',
         checkIn: this.checkIn,
         checkOut: this.checkOut,
         guests: this.guests,
@@ -418,6 +423,7 @@ export default {
           to_name: 'Bungalow Tehei',
           subject: this.$t('booking.email.subject'),
           property: bookingDetails.property,
+          property_location: bookingDetails.propertyLocation,
           check_in: bookingDetails.checkIn,
           check_out: bookingDetails.checkOut,
           guests: bookingDetails.guests,

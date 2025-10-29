@@ -74,6 +74,7 @@
           <AvailabilityCard
             :nightlyFrom="property.nightlyFrom"
             :maxGuests="property.maxGuests"
+            :propertyName="currentProperty.propertyName"
           />
         </div>
       </div>
@@ -92,6 +93,12 @@ import propertyI18n from './data/property-i18n.json'
 
 export default {
   name: 'App',
+  props: {
+    propertyType: {
+      type: String,
+      default: 'pool'
+    }
+  },
   components: {
     GalleryCarousel,
     PropertyFacts,

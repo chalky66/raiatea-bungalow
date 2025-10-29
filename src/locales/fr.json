@@ -1,4 +1,27 @@
 {
+  "landing": {
+    "title": "Bungalows Raiatea",
+    "location": "Raiatea, Polynésie française",
+    "subtitle": "Choisissez Votre Bungalow Idéal",
+    "description": "Vivez l'authentique vie insulaire dans notre cadre de jardin paisible",
+    "poolBungalow": {
+      "name": "Bungalow avec Piscine",
+      "description": "Détendez-vous avec votre propre piscine privée sur la terrasse",
+      "feature1": "Piscine privée sur terrasse",
+      "feature2": "2 vélos inclus",
+      "feature3": "Cadre de jardin paisible"
+    },
+    "standardBungalow": {
+      "name": "Bungalow",
+      "description": "Hébergement simple et vert dans un environnement tranquille",
+      "feature1": "Cadre de jardin paisible",
+      "feature2": "2 vélos inclus",
+      "feature3": "Terrasse privée"
+    },
+    "viewProperty": "Voir Détails & Réserver",
+    "contactInfo": "Les deux bungalows sont situés sur la même propriété paisible, à 5 minutes du centre-ville",
+    "footer": "Bungalows Raiatea - Polynésie française"
+  },
   "nav": {
     "share": "Partager",
     "save": "Sauvegarder"
