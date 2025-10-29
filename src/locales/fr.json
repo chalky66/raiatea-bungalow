@@ -26,6 +26,11 @@
     "share": "Partager",
     "save": "Sauvegarder"
   },
+  "navigation": {
+    "backToLanding": "Retour aux Propriétés",
+    "viewPoolBungalow": "Voir Bungalow avec Piscine",
+    "viewStandardBungalow": "Voir Bungalow Standard"
+  },
   "property": {
     "guests": "voyageurs",
     "bedrooms": "chambres",

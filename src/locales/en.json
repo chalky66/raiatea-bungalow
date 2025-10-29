@@ -26,6 +26,11 @@
     "share": "Share",
     "save": "Save"
   },
+  "navigation": {
+    "backToLanding": "Back to Properties",
+    "viewPoolBungalow": "View Bungalow with Pool",
+    "viewStandardBungalow": "View Standard Bungalow"
+  },
   "property": {
     "guests": "guests",
     "bedrooms": "bedrooms", 
