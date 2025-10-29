@@ -47,7 +47,7 @@
               </li>
             </ul>
             <a
-              href="/bungalow-with-pool.html"
+              :href="getBasePath() + 'bungalow-with-pool.html'"
               class="block w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg text-center btn-transition"
             >
               {{ $t('landing.viewProperty') }}
@@ -80,7 +80,7 @@
               </li>
             </ul>
             <a
-              href="/bungalow.html"
+              :href="getBasePath() + 'bungalow.html'"
               class="block w-full bg-green-600 hover:bg-green-700 text-white font-semibold py-3 px-6 rounded-lg text-center btn-transition"
             >
               {{ $t('landing.viewProperty') }}
@@ -111,6 +111,11 @@ export default {
   name: 'LandingPage',
   components: {
     LanguageSwitcher
+  },
+  methods: {
+    getBasePath() {
+      return import.meta.env.MODE === 'production' ? '/raiatea-bungalow/' : '/'
+    }
   }
 }
 </script>
