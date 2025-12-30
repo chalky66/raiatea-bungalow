@@ -25,9 +25,12 @@
         <!-- Bungalow with Pool -->
         <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
           <div class="aspect-video bg-gradient-to-br from-blue-400 to-blue-600 relative overflow-hidden">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <span class="text-8xl">🏊</span>
-            </div>
+            <img 
+              src="/img/BungalowAvecPiscine.png" 
+              alt="Bungalow with pool" 
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-blue-900 bg-opacity-20"></div>
           </div>
           <div class="p-6">
             <h3 class="text-2xl font-bold text-gray-900 mb-2">{{ $t('landing.poolBungalow.name') }}</h3>
@@ -58,9 +61,12 @@
         <!-- Standard Bungalow -->
         <div class="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-shadow duration-300">
           <div class="aspect-video bg-gradient-to-br from-green-400 to-green-600 relative overflow-hidden">
-            <div class="absolute inset-0 flex items-center justify-center">
-              <span class="text-8xl">🌴</span>
-            </div>
+            <img 
+              src="/img/ExterieurVegetation.png" 
+              alt="Bungalow exterior" 
+              class="absolute inset-0 w-full h-full object-cover"
+            />
+            <div class="absolute inset-0 bg-green-900 bg-opacity-20"></div>
           </div>
           <div class="p-6">
             <h3 class="text-2xl font-bold text-gray-900 mb-2">{{ $t('landing.standardBungalow.name') }}</h3>
