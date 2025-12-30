@@ -4,7 +4,7 @@ import i18n from './i18n'
 import './styles.css'
 
 // Import standard property data
-import propertyData from './data/property.json'
+import propertyData from './data/property-standard.json'
 import propertyI18n from './data/property-standard-i18n.json'
 
 const app = createApp(App, {

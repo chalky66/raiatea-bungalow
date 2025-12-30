@@ -4,7 +4,7 @@ import i18n from './i18n'
 import './styles.css'
 
 // Import pool property data
-import propertyData from './data/property.json'
+import propertyData from './data/property-pool.json'
 import propertyI18n from './data/property-pool-i18n.json'
 
 const app = createApp(App, {
