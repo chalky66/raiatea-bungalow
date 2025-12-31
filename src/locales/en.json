@@ -90,6 +90,12 @@
       "kayakHire": "Kayak hire",
       "subtotal": "Extras subtotal"
     },
+    "services": {
+      "title": "Services",
+      "airportPickup": "Airport pickup",
+      "airportDropoff": "Airport dropoff",
+      "dailyKayakHire": "Daily kayak hire"
+    },
     "error": "Sorry, there was an error sending your booking request. Please try again or contact us directly.",
     "confirmation": {
       "title": "Confirm Your Booking",

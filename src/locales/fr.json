@@ -89,8 +89,12 @@
       "airportPickup": "Transfert aéroport",
       "kayakHire": "Location kayak",
       "subtotal": "Sous-total suppléments"
-    },
-    "error": "Désolé, une erreur s'est produite lors de l'envoi de votre demande de réservation. Veuillez réessayer ou nous contacter directement.",
+    },    "services": {
+      "title": "Services",
+      "airportPickup": "Navette aéroport (aller)",
+      "airportDropoff": "Navette aéroport (retour)",
+      "dailyKayakHire": "Location kayak journalière"
+    },    "error": "Désolé, une erreur s'est produite lors de l'envoi de votre demande de réservation. Veuillez réessayer ou nous contacter directement.",
     "confirmation": {
       "title": "Confirmer Votre Réservation",
       "message": "Veuillez fournir vos informations de contact pour compléter la demande de réservation.",

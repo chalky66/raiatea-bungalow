@@ -50,36 +50,78 @@
         </select>
       </div>
 
-      <!-- Book Buttons -->
-      <div class="space-y-3">
-        <button
-          type="submit"
-          class="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-4 rounded-lg btn-transition focus:ring-4 focus:ring-rose-200 relative"
-          :disabled="!isFormValid"
-          :class="{ 'opacity-50 cursor-not-allowed': !isFormValid }"
-          @mouseenter="handleReserveHover"
-          @mouseleave="handleReserveLeave"
-        >
-          {{ $t('property.reserve') }}
-        </button>
-        
-        <!-- Date Required Toast - positioned below Reserve button -->
-        <div v-if="showDateToast" 
-             class="bg-yellow-200 text-gray-900 text-sm font-bold px-6 py-3 rounded-lg shadow-2xl border-2 border-yellow-400 text-center mt-2"
-             style="background-color: #fef3c7;">
-          {{ $t('booking.enterDatesFirst') }}
+      <!-- Services Section - Shows only when dates are entered -->
+      <div v-if="checkIn && checkOut" class="border border-gray-300 rounded-lg p-3">
+        <label class="block text-xs font-medium text-gray-700 mb-3">{{ $t('booking.services.title') }}</label>
+        <div class="space-y-3">
+          <label class="flex items-center justify-between">
+            <div class="flex items-center">
+              <input 
+                type="checkbox" 
+                v-model="selectedExtras.airportPickup"
+                class="mr-3 h-4 w-4 text-rose-500 border-gray-300 rounded focus:ring-rose-500"
+              >
+              <span class="text-sm text-gray-700">{{ $t('booking.services.airportPickup') }}</span>
+            </div>
+            <span class="text-sm font-medium">€15</span>
+          </label>
+          
+          <label class="flex items-center justify-between">
+            <div class="flex items-center">
+              <input 
+                type="checkbox" 
+                v-model="selectedExtras.airportDropoff"
+                class="mr-3 h-4 w-4 text-rose-500 border-gray-300 rounded focus:ring-rose-500"
+              >
+              <span class="text-sm text-gray-700">{{ $t('booking.services.airportDropoff') }}</span>
+            </div>
+            <span class="text-sm font-medium">€15</span>
+          </label>
+          
+          <label class="flex items-center justify-between">
+            <div class="flex items-center">
+              <input 
+                type="checkbox" 
+                v-model="selectedExtras.kayakHire"
+                class="mr-3 h-4 w-4 text-rose-500 border-gray-300 rounded focus:ring-rose-500"
+              >
+              <span class="text-sm text-gray-700">{{ $t('booking.services.dailyKayakHire') }}</span>
+            </div>
+            <span class="text-sm font-medium">€10</span>
+          </label>
         </div>
-        
-        <button
-          v-if="!showDateToast"
-          type="button"
-          @click="showAirbnbPopup = true"
-          class="w-full bg-white border-2 border-rose-500 text-rose-500 hover:bg-rose-50 font-semibold py-4 rounded-lg btn-transition focus:ring-4 focus:ring-rose-200"
-        >
-          {{ $t('booking.reserveOnAirbnb') }}
-        </button>
       </div>
     </form>
+
+    <!-- Book Buttons - Moved outside form -->
+    <div class="space-y-3 mt-4">
+      <button
+        @click="handleBookingRequest"
+        class="w-full bg-rose-500 hover:bg-rose-600 text-white font-semibold py-4 rounded-lg btn-transition focus:ring-4 focus:ring-rose-200 relative"
+        :disabled="!isFormValid"
+        :class="{ 'opacity-50 cursor-not-allowed': !isFormValid }"
+        @mouseenter="handleReserveHover"
+        @mouseleave="handleReserveLeave"
+      >
+        {{ $t('property.reserve') }}
+      </button>
+      
+      <!-- Date Required Toast - positioned below Reserve button -->
+      <div v-if="showDateToast" 
+           class="bg-yellow-200 text-gray-900 text-sm font-bold px-6 py-3 rounded-lg shadow-2xl border-2 border-yellow-400 text-center mt-2"
+           style="background-color: #fef3c7;">
+        {{ $t('booking.enterDatesFirst') }}
+      </div>
+      
+      <button
+        v-if="!showDateToast"
+        type="button"
+        @click="showAirbnbPopup = true"
+        class="w-full bg-white border-2 border-rose-500 text-rose-500 hover:bg-rose-50 font-semibold py-4 rounded-lg btn-transition focus:ring-4 focus:ring-rose-200"
+      >
+        {{ $t('booking.reserveOnAirbnb') }}
+      </button>
+    </div>
 
     <!-- Price breakdown -->
     <div v-if="nights > 0" class="mt-6 pt-6 border-t border-gray-200">
@@ -89,62 +131,14 @@
           <span>€{{ subtotal }}</span>
         </div>
         <div class="flex justify-between text-sm">
-          <span>{{ $t('booking.pricing.serviceFee') }}</span>
-          <span>€{{ serviceFee }}</span>
-        </div>
-        <div class="flex justify-between text-sm">
           <span>{{ $t('booking.pricing.taxes') }}</span>
           <span>€{{ taxes }}</span>
         </div>
         
-        <!-- Extras Section -->
-        <div class="mt-4">
-          <button 
-            @click="showExtras = !showExtras"
-            class="flex items-center justify-between w-full text-left text-sm font-medium text-gray-700 hover:text-gray-900"
-          >
-            <span>{{ $t('booking.extras.title') }}</span>
-            <svg 
-              :class="{ 'transform rotate-180': showExtras }"
-              class="w-4 h-4 transition-transform"
-              fill="none" 
-              stroke="currentColor" 
-              viewBox="0 0 24 24"
-            >
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
-            </svg>
-          </button>
-          
-          <div v-if="showExtras" class="mt-3 space-y-3">
-            <label class="flex items-center justify-between">
-              <div class="flex items-center">
-                <input 
-                  type="checkbox" 
-                  v-model="selectedExtras.airportPickup"
-                  class="mr-3 h-4 w-4 text-rose-500 border-gray-300 rounded focus:ring-rose-500"
-                >
-                <span class="text-sm text-gray-700">{{ $t('booking.extras.airportPickup') }}</span>
-              </div>
-              <span class="text-sm font-medium">€20</span>
-            </label>
-            
-            <label class="flex items-center justify-between">
-              <div class="flex items-center">
-                <input 
-                  type="checkbox" 
-                  v-model="selectedExtras.kayakHire"
-                  class="mr-3 h-4 w-4 text-rose-500 border-gray-300 rounded focus:ring-rose-500"
-                >
-                <span class="text-sm text-gray-700">{{ $t('booking.extras.kayakHire') }}</span>
-              </div>
-              <span class="text-sm font-medium">€10</span>
-            </label>
-          </div>
-          
-          <div v-if="extrasTotal > 0" class="flex justify-between text-sm mt-3 pt-3 border-t border-gray-200">
-            <span>{{ $t('booking.extras.subtotal') }}</span>
-            <span>€{{ extrasTotal }}</span>
-          </div>
+        <!-- Services breakdown - only show if services selected -->
+        <div v-if="extrasTotal > 0" class="flex justify-between text-sm">
+          <span>{{ $t('booking.services.title') }}</span>
+          <span>€{{ extrasTotal }}</span>
         </div>
         
         <hr class="my-3">
@@ -317,7 +311,6 @@ export default {
       guests: 1,
       showAirbnbPopup: false,
       showDateToast: false,
-      showExtras: false,
       showConfirmationPopup: false,
       showSuccessPopup: false,
       userContact: {
@@ -327,6 +320,7 @@ export default {
       },
       selectedExtras: {
         airportPickup: false,
+        airportDropoff: false,
         kayakHire: false
       }
     }
@@ -360,12 +354,13 @@ export default {
     },
     extrasTotal() {
       let total = 0
-      if (this.selectedExtras.airportPickup) total += 20
+      if (this.selectedExtras.airportPickup) total += 15
+      if (this.selectedExtras.airportDropoff) total += 15
       if (this.selectedExtras.kayakHire) total += 10
       return total
     },
     total() {
-      return this.subtotal + this.serviceFee + this.taxes + this.extrasTotal
+      return this.subtotal + this.taxes + this.extrasTotal
     },
     isFormValid() {
       return this.checkIn && this.checkOut && this.guests && this.nights > 0
@@ -386,8 +381,9 @@ export default {
 
       // Create booking summary including extras and contact info
       const selectedExtrasDetails = []
-      if (this.selectedExtras.airportPickup) selectedExtrasDetails.push('Airport pickup - €20')
-      if (this.selectedExtras.kayakHire) selectedExtrasDetails.push('Kayak hire - €10')
+      if (this.selectedExtras.airportPickup) selectedExtrasDetails.push('Airport pickup - €15')
+      if (this.selectedExtras.airportDropoff) selectedExtrasDetails.push('Airport dropoff - €15')
+      if (this.selectedExtras.kayakHire) selectedExtrasDetails.push('Daily kayak hire - €10')
       
       const bookingDetails = {
         property: this.propertyName,
@@ -397,7 +393,6 @@ export default {
         guests: this.guests,
         nights: this.nights,
         subtotal: this.subtotal,
-        serviceFee: this.serviceFee,
         taxes: this.taxes,
         extrasTotal: this.extrasTotal,
         selectedExtras: selectedExtrasDetails.join(', ') || 'None',
@@ -429,7 +424,6 @@ export default {
           guests: bookingDetails.guests,
           nights: bookingDetails.nights,
           subtotal: bookingDetails.subtotal,
-          service_fee: bookingDetails.serviceFee,
           taxes: bookingDetails.taxes,
           extras_total: bookingDetails.extrasTotal,
           selected_extras: bookingDetails.selectedExtras,
